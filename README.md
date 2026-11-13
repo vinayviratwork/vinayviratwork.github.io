@@ -27,7 +27,7 @@ Open `data/resumes.js` and edit the `RESUMES` array. Each object has:
 - `lastUpdated` — displayed under the PDF preview
 
 ### Edit contact details / meta
-Open `index.html` and search for `vinayvirat827178@gmail.com` or `+91-8893770796`. All contact links are plain `<a href>` elements — update in place.
+Open `index.html` and search for `vinayviratoff@gmail.com` or `+91-8893770796`. All contact links are plain `<a href>` elements — update in place.
 
 ---
 

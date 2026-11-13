@@ -70,7 +70,7 @@ if (contactForm) {
     const subject = document.getElementById('cSubject').value.trim();
     const message = document.getElementById('cMessage').value.trim();
     if (!name || !email || !message) return;
-    const to   = 'vinayvirat827178@gmail.com';
+    const to   = 'vinayviratoff@gmail.com';
     const sub  = encodeURIComponent(subject || `Message from ${name} via portfolio`);
     const body = encodeURIComponent(`Hi Vinay,\n\n${message}\n\n---\nFrom: ${name}\nReply-to: ${email}`);
     window.location.href = `mailto:${to}?subject=${sub}&body=${body}`;
