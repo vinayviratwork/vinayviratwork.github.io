@@ -37,6 +37,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
@@ -52,6 +53,7 @@
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
+  <a href="#resume">Resume</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -77,6 +79,7 @@
 
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="resumes/resume-general.pdf" download class="btn btn-outline">Download resume</a>
         </div>
 
         <div class="hero-meta">
@@ -354,6 +357,27 @@
 </section>
 
 <!-- ============================================================
+     RESUME TAB
+     ============================================================ -->
+<section id="resume">
+  <div class="container">
+    <div class="section-label">Resume</div>
+    <h2 style="margin-bottom: 12px;">Pick the role you're hiring for</h2>
+    <p style="margin-bottom: 36px; max-width: 500px;">
+      Each version is the same person — just the framing shifts based on what matters for that role.
+    </p>
+
+    <!-- Desktop pill switcher -->
+    <div class="role-switcher" id="roleSwitcher" aria-label="Resume role selector"></div>
+
+    <!-- Mobile select -->
+    <label for="roleSelect" class="sr-only">Select resume role</label>
+    <select class="role-select-mobile" id="roleSelect" aria-label="Select resume role"></select>
+
+    <!-- Panels rendered by resume.js -->
+    <div class="resume-panels" id="resumePanels"></div>
+  </div>
+</section>
 
 <!-- ============================================================
      CONTACT
@@ -472,7 +496,9 @@
      Load data files first, then logic scripts.
      ============================================================ -->
 <script src="data/projects.js"></script>
+<script src="data/resumes.js"></script>
 <script src="js/main.js"></script>
+<script src="js/resume.js"></script>
 
 <!-- Screen reader only utility -->
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
