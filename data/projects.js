@@ -65,5 +65,20 @@ const PROJECTS = [
     tags: ["Java 21", "Spring Boot 3", "MySQL", "Groq AI", "Docker", "Swagger", "JUnit"],
     github: "https://github.com/vinayviratwork/JOB-BOT",
     live: null
+  },
+  {
+    id: "revenue-leakage",
+    number: "05",
+    title: "Revenue Leakage Detection",
+    stack: "Python · SQL (SQLite) · Streamlit · Plotly · Pandas · Power BI",
+    problem:
+      "Accounts-payable teams process thousands of invoices manually. Duplicate payments, approval-limit splits, and statistical outliers slip through undetected because there is no systematic way to flag them at scale.",
+    what:
+      "End-to-end audit-analytics pipeline on 20,951 synthetic invoices across 150 vendors over 3 Indian financial years. Five SQL detection rules target different fraud patterns — duplicates, split invoices, weekend payments, round figures, and statistical outliers. A risk-scoring engine assigns each invoice a score (0–100) and classifies it HIGH / MEDIUM / LOW. An interactive Streamlit dashboard surfaces the top risks with KPI cards, a leakage-by-rule chart, monthly trend line, top-vendor table, and a Model Quality tab showing per-rule precision/recall/F1. Output also includes a Power BI star-schema export (fact + 3 dims) for independent analysis. The whole pipeline is covered by 41 automated tests.",
+    outcome:
+      "Flagged 1,731 of 20,951 invoices (8.3%) with an overall recall of 99.6% and F1 of 77.9%. Potential leakage identified: Rs 15.52 Cr before audit review, Rs 8.97 Cr from confirmed true positives. All 41 tests pass. Pipeline is fully reproducible from a single seed.",
+    tags: ["Python", "SQL", "SQLite", "Streamlit", "Plotly", "Pandas", "Power BI", "Data Analytics"],
+    github: "https://github.com/vinayviratwork/revenue-leakage-detection",
+    live: null
   }
 ];
