@@ -37,8 +37,23 @@ const PROJECTS = [
     live: null
   },
   {
-    id: "jobbot",
+    id: "battleground-x",
     number: "03",
+    title: "Battleground X — Multiplayer Battle Royale",
+    stack: "Unity 2022.3 · C# · NGO Netcode · Unity Relay · URP · Android · Windows",
+    problem:
+      "I wanted to prove I could build a real multiplayer game from scratch — not just a local prototype, but something with actual online networking, server-authoritative combat, and a full match loop that works across two devices.",
+    what:
+      "Built an original 10-player online battle-royale in Unity 2022.3 using 35 C# scripts written entirely from scratch. The networking runs on Unity NGO 1.8.1 with Unity Relay so players join via a 6-digit code — no IP exposure, works behind firewalls. Combat is server-authoritative: the server validates every shot (ammo check, direction check, raycast on server physics) before dealing damage. The map has 8 named zones — Military Base, School, Pochinki, Hospital, Port, Ruins, Farm, Shelter — each with unique buildings and strategic value. I built a 7-phase shrinking safe zone, a full match state machine (Lobby → Countdown → Match → End), a RenderTexture minimap, pooled VFX system for zero GC allocation on mobile, an Animator state machine driven from NetworkVariables, a settings menu with PlayerPrefs persistence, live ping display via ServerRpc echo, and world-space name tags. One-click scene generator creates the entire map from code so there are no binary Unity scene files in Git.",
+    outcome:
+      "A complete multiplayer game prototype with 35 clean scripts, a live portfolio site, full documentation including an architecture doc, and a GitHub repo that shows how I think about networking, state management, and mobile performance.",
+    tags: ["Unity", "C#", "NGO Netcode", "Unity Relay", "URP", "Android", "Windows x64", "Game Dev"],
+    github: "https://github.com/vinayviratwork/BattlegroundX",
+    live: "https://vinayviratwork.github.io/BattlegroundX"
+  },
+  {
+    id: "jobbot",
+    number: "04",
     title: "JobBot — AI Job Application Assistant",
     stack: "Java 21 · Spring Boot 3 · MySQL · Groq AI (Llama 3.3) · Docker",
     problem:
