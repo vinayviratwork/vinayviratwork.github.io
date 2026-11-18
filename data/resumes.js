@@ -1,9 +1,9 @@
-﻿const RESUMES = [
+const RESUMES = [
   {
     id: "swe",
     roleName: "Software Engineer / Platform",
     summary:
-      "I build backend services in Java Spring Boot and full-stack apps with the MERN stack. Currently doing this full-time at Ambula Technology. I work in Agile sprints, write API docs, and fix bugs in production. Outside of work I have shipped three projects from scratch.",
+      "Platform Software Engineer at Ambula Technology, focused on backend services and API development with Java and Spring Boot. I also build full-stack applications and data-driven tools, with hands-on experience across React, Node.js, SQL, and Python.",
     skills: [
       "Java", "Spring Boot", "Node.js", "Express.js",
       "React.js", "JavaScript", "MySQL", "MongoDB",
@@ -11,7 +11,7 @@
       "Agile/Scrum", "API Documentation", "Swagger"
     ],
     achievements: [
-      "Built and maintained Spring Boot REST endpoints at Ambula Technology — paginated recording data, JWT-based access control, Azure Blob Storage streaming.",
+      "Contribute to backend development at Ambula Technology as a Platform Software Engineer, working with Spring Boot REST endpoints, MySQL, and API integrations.",
       "Implemented JWT auth and role-based access control across frontend routes and backend endpoints in multiple projects.",
       "JobBot: Spring Boot app that hits 5 job board APIs, stores results in MySQL, and uses Groq to score jobs against a PDF resume and draft cover letters. Java 21, Docker, unit tests.",
       "AI Market Trend Assistant: React 19 dashboard with Recharts, Node.js API, chat assistant, and a proposal generator that builds an 8-slide deck.",
@@ -25,7 +25,7 @@
     id: "consulting",
     roleName: "Technology / Business Consulting",
     summary:
-      "I do backend engineering by day and I have done business-facing work too — CRM for 500+ leads, Power BI dashboards for a sales team, and I am in the McKinsey Forward Program right now. I can read a problem, figure out what needs to be built, and ship it.",
+      "A software engineering background complemented by business-facing experience in CRM operations and reporting. I've worked with LeadSquared, built Power BI dashboards, and currently develop backend services at Ambula Technology. I enjoy translating practical needs into clear workflows and useful software.",
     skills: [
       "Power BI", "SQL", "LeadSquared CRM",
       "Data Visualization", "Stakeholder Communication",
@@ -48,7 +48,7 @@
     id: "data",
     roleName: "Data Analyst",
     summary:
-      "I work with SQL, Python (Pandas), and Power BI. I have written SQL detection rules, built Streamlit dashboards, designed normalized schemas, and built Power BI reports from scratch at an actual job. I know how data moves from a database to a chart.",
+      "I use SQL, Python, Pandas, and Power BI to explore data, build repeatable analysis, and communicate findings through dashboards. My Revenue Leakage Detection project combines rule-based SQL checks, risk scoring, automated tests, and an interactive Streamlit interface.",
     skills: [
       "SQL", "MySQL", "SQLite", "Python", "Pandas",
       "Power BI", "Streamlit", "Plotly",
@@ -70,7 +70,7 @@
     id: "general",
     roleName: "General",
     summary:
-      "Backend engineer at Ambula Technology, 2026 B.Tech CSIT grad. I write Spring Boot APIs, design MySQL schemas, and ship features in Agile sprints. I have also built full-stack apps in React and Node.js and done reporting work with Power BI and SQL.",
+      "2026 Computer Science and Information Technology graduate and Platform Software Engineer at Ambula Technology. I work on backend services with Java, Spring Boot, REST APIs, and MySQL, and build independent projects across full-stack development, AI-assisted workflows, and data analytics.",
     skills: [
       "Java", "JavaScript", "Python", "SQL",
       "Spring Boot", "React.js", "Node.js",
@@ -79,7 +79,7 @@
       "Data Structures and Algorithms"
     ],
     achievements: [
-      "Platform Software Engineer at Ambula Technology: Spring Boot APIs, JWT auth, Azure Blob Storage streaming, MySQL schemas, Agile delivery.",
+      "Platform Software Engineer at Ambula Technology: backend development with Spring Boot, REST APIs, MySQL, and collaborative Agile delivery.",
       "Revenue Leakage Detection: SQL pipeline flagging Rs 15.52 Cr on 20,951 invoices, Streamlit dashboard, 41 tests.",
       "JobBot: Spring Boot app that hits 5 job APIs, scores against a PDF resume with Groq, drafts cover letters. Java 21, MySQL, Docker.",
       "AI Market Trend Assistant: React + Node.js dashboard and proposal generator.",
