@@ -1,22 +1,15 @@
-/**
- * projects.js — Project case study data.
- *
- * HOW TO ADD A PROJECT:
- * 1. Add a new object to the PROJECTS array.
- * 2. The page renders them in order. No HTML changes needed.
- */
-const PROJECTS = [
+﻿const PROJECTS = [
   {
     id: "food-recipe",
     number: "01",
     title: "RecipeHub — Food Recipe Web App",
     stack: "MongoDB · Express.js · React.js · Node.js · JWT",
     problem:
-      "I wanted to build something that covered the full authentication and authorization flow end to end, not just a frontend calling a mock API.",
+      "I wanted to build something that covered auth end to end — not just a frontend hitting a mock API, but actual login, roles, and protected routes on both sides.",
     what:
-      "Full-stack recipe platform with a React 19 frontend and a Node.js/Express REST backend. I designed an indexed MongoDB schema for efficient queries, implemented JWT auth and role-based access control so only authors can edit their own content, and wired up full-text search, pagination, and star ratings. Protected routes handled on both frontend and backend.",
+      "Full-stack recipe platform, React 19 on the front and Node.js/Express on the back. I designed a MongoDB schema with text indexes for search, wired up JWT auth with bcrypt, added role-based access so only the author can edit their own recipes, and built pagination and star ratings. Protected routes on both frontend and backend — if the token is bad, nothing works.",
     outcome:
-      "A production-style MERN app with real auth, real data persistence, and an API that is documented. Used as a reference for how I think about full-stack projects.",
+      "A MERN app with real auth, real data, and a documented API. I use it as my baseline when I start a new full-stack project.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST API", "Vite"],
     github: "https://github.com/vinayviratwork/food-recipe-app",
     live: null
@@ -27,11 +20,11 @@ const PROJECTS = [
     title: "AI Market Trend Assistant",
     stack: "React 19 · Node.js · Express · Recharts · Vite",
     problem:
-      "Wanted a project that showed I could handle a data-heavy frontend, a conversational backend, and document generation all in one go.",
+      "I wanted one project that showed three things: a data-heavy dashboard, multiple API endpoints, and document generation. No good reason to split them up.",
     what:
-      "Full-stack executive intelligence platform. The backend is a Node.js/Express REST API serving 10 AI market trends covering $279B in market data. The React 19 frontend has three distinct flows: a Dashboard with Recharts trend charts and filters, a conversational AI Assistant for market queries, and a Proposal Generator that builds an 8-slide executive deck with speaker notes and ROI projections.",
+      "React 19 frontend with three pages — a dashboard of 10 AI market trends with Recharts charts and filters, a chat-style assistant for market questions, and a proposal generator that builds an 8-slide deck with speaker notes and ROI numbers. Node.js/Express backend handles the data and generation logic. CORS-restricted.",
     outcome:
-      "A complete full-stack app that goes beyond basic CRUD and shows I can think about data presentation and multiple user flows, not just endpoints.",
+      "One project that does too many things, which was the point. Shows I can wire up different user flows through the same backend without them breaking each other.",
     tags: ["React 19", "Node.js", "Express.js", "Recharts", "REST API", "Vite"],
     github: "https://github.com/vinayviratwork/AI-Trend-Assistant",
     live: null
@@ -42,11 +35,11 @@ const PROJECTS = [
     title: "Battleground X — Multiplayer Battle Royale",
     stack: "Unity 2022.3 · C# · NGO Netcode · Unity Relay · URP · Android · Windows",
     problem:
-      "I wanted to prove I could build a real multiplayer game from scratch — not just a local prototype, but something with actual online networking, server-authoritative combat, and a full match loop that works across two devices.",
+      "I wanted to build real online multiplayer — not a local two-player prototype, but actual matchmaking over the internet where combat is validated on the server.",
     what:
-      "Built an original 10-player online battle-royale in Unity 2022.3 using 35 C# scripts written entirely from scratch. The networking runs on Unity NGO 1.8.1 with Unity Relay so players join via a 6-digit code — no IP exposure, works behind firewalls. Combat is server-authoritative: the server validates every shot (ammo check, direction check, raycast on server physics) before dealing damage. The map has 8 named zones — Military Base, School, Pochinki, Hospital, Port, Ruins, Farm, Shelter — each with unique buildings and strategic value. I built a 7-phase shrinking safe zone, a full match state machine (Lobby → Countdown → Match → End), a RenderTexture minimap, pooled VFX system for zero GC allocation on mobile, an Animator state machine driven from NetworkVariables, a settings menu with PlayerPrefs persistence, live ping display via ServerRpc echo, and world-space name tags. One-click scene generator creates the entire map from code so there are no binary Unity scene files in Git.",
+      "10-player battle royale in Unity 2022.3, 35 C# scripts from scratch. Networking on Unity NGO 1.8.1 with Unity Relay — players join via a 6-digit code, no IP address needed, works behind NAT. Server validates every shot: ammo check, direction check, raycast on server physics. 8 named map zones. Shrinking safe zone with 7 phases, full match state machine, minimap using RenderTexture, pooled VFX so there is no GC spike on mobile. Scene generator builds the map from code — no binary Unity files in the repo.",
     outcome:
-      "A complete multiplayer game prototype with 35 clean scripts, a live portfolio site, full documentation including an architecture doc, and a GitHub repo that shows how I think about networking, state management, and mobile performance.",
+      "A working multiplayer game you can install and play. The VFX pooling was the hardest part — mobile kept freezing until I got the object pool tuned right.",
     tags: ["Unity", "C#", "NGO Netcode", "Unity Relay", "URP", "Android", "Windows x64", "Game Dev"],
     github: "https://github.com/vinayviratwork/BattlegroundX",
     live: "https://vinayviratwork.github.io/BattlegroundX"
@@ -57,11 +50,11 @@ const PROJECTS = [
     title: "JobBot — AI Job Application Assistant",
     stack: "Java 21 · Spring Boot 3 · MySQL · Groq AI (Llama 3.3) · Docker",
     problem:
-      "I wanted a real Spring Boot project with external API integrations, AI, and a proper database — not a toy CRUD app.",
+      "I apply to a lot of jobs and kept copy-pasting the same information. I wanted a Spring Boot project with real external integrations — not just CRUD endpoints talking to one database.",
     what:
-      "Spring Boot application that fetches jobs from 5 public job board APIs (Greenhouse, Lever, Ashby, Workable, RemoteOK), scores each listing against an uploaded resume using Groq AI (free, $0 cost), and auto-drafts tailored cover letters for roles above the match threshold. The pipeline runs on demand or on a daily 9am schedule. Includes a vanilla JS dashboard served by Spring Boot, Swagger UI, CSV export, optional email alerts, and unit tests.",
+      "Spring Boot app that hits 5 job board APIs (Greenhouse, Lever, Ashby, Workable, RemoteOK), saves listings to MySQL via Spring Data JPA, and runs a daily scan at 9am. Upload a PDF resume and Groq scores each job 0-100 against it, then drafts a cover letter for anything above the threshold. The prompt tells the model not to invent experience I do not have. Vanilla JS dashboard, Swagger docs, CSV export, email alerts, Docker Compose, unit tests.",
     outcome:
-      "A production-style Java application with real external integrations, AI scoring with anti-hallucination guardrails, a working dashboard, and unit tests. Something I actually use.",
+      "I actually use it. Went from spending 20 minutes per application to reviewing a shortlist. The scoring is not perfect but it is better than reading 50 job descriptions manually.",
     tags: ["Java 21", "Spring Boot 3", "MySQL", "Groq AI", "Docker", "Swagger", "JUnit"],
     github: "https://github.com/vinayviratwork/JOB-BOT",
     live: null
@@ -72,11 +65,11 @@ const PROJECTS = [
     title: "Revenue Leakage Detection",
     stack: "Python · SQL (SQLite) · Streamlit · Plotly · Pandas · Power BI",
     problem:
-      "Accounts-payable teams process thousands of invoices manually. Duplicate payments, approval-limit splits, and statistical outliers slip through undetected because there is no systematic way to flag them at scale.",
+      "Accounts-payable teams miss duplicate payments, approval-limit splits, and outlier invoices because there is no automated way to flag them. Manual review does not scale past a few hundred invoices.",
     what:
-      "End-to-end audit-analytics pipeline on 20,951 synthetic invoices across 150 vendors over 3 Indian financial years. Five SQL detection rules target different fraud patterns — duplicates, split invoices, weekend payments, round figures, and statistical outliers. A risk-scoring engine assigns each invoice a score (0–100) and classifies it HIGH / MEDIUM / LOW. An interactive Streamlit dashboard surfaces the top risks with KPI cards, a leakage-by-rule chart, monthly trend line, top-vendor table, and a Model Quality tab showing per-rule precision/recall/F1. Output also includes a Power BI star-schema export (fact + 3 dims) for independent analysis. The whole pipeline is covered by 41 automated tests.",
+      "Python pipeline on 20,951 synthetic invoices, 150 vendors, 3 Indian financial years. Five SQL rules each catch a different pattern: duplicates within 7 days, invoice clusters just below the Rs 50,000 approval limit, payments on weekends or holidays, suspiciously round amounts from non-retainer vendors, and statistical outliers (vendor mean + 3 std devs). Each flagged invoice gets a risk score 0-100. Streamlit dashboard shows KPI cards, leakage broken down by rule, monthly trend, top vendors by exposure, and per-rule precision/recall/F1. Power BI export is a star schema — one fact table, three dims.",
     outcome:
-      "Flagged 1,731 of 20,951 invoices (8.3%) with an overall recall of 99.6% and F1 of 77.9%. Potential leakage identified: Rs 15.52 Cr before audit review, Rs 8.97 Cr from confirmed true positives. All 41 tests pass. Pipeline is fully reproducible from a single seed.",
+      "1,731 of 20,951 invoices flagged (8.3%). Recall 99.6%, F1 77.9%. Potential leakage Rs 15.52 Cr before audit, Rs 8.97 Cr from confirmed matches. 41 tests, all passing.",
     tags: ["Python", "SQL", "SQLite", "Streamlit", "Plotly", "Pandas", "Power BI", "Data Analytics"],
     github: "https://github.com/vinayviratwork/revenue-leakage-detection",
     live: null
